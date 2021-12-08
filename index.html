@@ -1,0 +1,35 @@
+<script>
+
+    function computerPlay() {
+        const play = Math.ceil(Math.random()*3)
+        return play==1?'Rock':play==2?'Paper':'Scissors'
+    }
+
+    function declareWinner(playerSelection, computerSelection) {
+        const playerMove = playerSelection.toLowerCase()
+        const computerMove = computerSelection.toLowerCase()
+
+        return playerMove=='rock'&&computerMove=='paper'?'You lose! i win muahaha!':playerMove=='rock'&&computerMove=='scissors'?'You win! but i\'ll win the next one!':playerMove=='paper'&&computerMove=='scissors'?'You lose! i win muahaha!':playerMove=='paper'&&computerMove=='rock'?'You win! but i\'ll win the next one!':playerMove=='scissors'&&computerMove=='rock'?'You lose! i win muahaha!':playerMove=='scissors'&&computerMove=='paper'?'You win! but i\'ll win the next one!':playerMove==computerMove?'Draw! this round doesn\'t count! chicken chicken!':'Invalid player move! you don\'t know how to play such simple game?'
+    }
+
+    function game() {
+        let playerWins = 0
+        let computerWins = 0
+        let i = 0
+        window.alert('We\'ll play a 5 round of rock, paper, scissors war prepare yourself human!')
+        while(i<5) {
+            const playerMove = window.prompt(`Round #${i+1} make your move meatbag!`)
+            const computerMove = computerPlay()
+            const result = declareWinner(playerMove, computerMove)
+            window.alert(result)
+            result.includes('lose')?computerWins++:result.includes('win')?playerWins++:0
+            result.includes('lose')||result.includes('win')?i++:0
+        }
+        window.alert(`Results: \n\n ${playerWins} Player - ${computerWins} Me\n ${playerWins>computerWins?'You win the war this time!':'I win the war! muahahaha!'}`)
+    }
+
+    const init = game();
+
+    window.onload() = init
+
+</script>
