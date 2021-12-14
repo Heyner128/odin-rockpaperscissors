@@ -25,7 +25,7 @@
             result.includes('lose')?computerWins++:result.includes('win')?playerWins++:0
             result.includes('lose')||result.includes('win')?i++:0
         }
-        window.alert(`Results: \n\n ${playerWins} Player - ${computerWins} Me\n ${playerWins>computerWins?'You win the war this time!':'I win the war! muahahaha!'}`)
+        window.alert(`Results: \n\n ${playerWins} Player - ${computerWins} Me\n\n ${playerWins>computerWins?'You win the war this time!':'I win the war! muahahaha!'}`)
     }
 
     const init = game();
