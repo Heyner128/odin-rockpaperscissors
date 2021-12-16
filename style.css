@@ -1,0 +1,43 @@
+.gameBtn {
+  --icon-size: 50px;
+  --icon-to-circle-ratio: 2.5;
+  font-size: var(--icon-size);
+  width: calc(var(--icon-size) * var(--icon-to-circle-ratio));
+  height: calc(var(--icon-size) * var(--icon-to-circle-ratio));
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 70%);
+  border: 5px solid rgb(255, 209, 166);
+  border-radius: 50%;
+}
+
+.gameBtn:hover {
+  background-color: white;
+}
+
+body {
+  background-color: #afe7e7;
+  font-family: "Bakbak One";
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#btnsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 98vh;
+}
+
+#textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  height: 98vh;
+  row-gap: 30px;
+}
