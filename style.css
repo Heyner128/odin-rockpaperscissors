@@ -44,6 +44,10 @@ body {
 }
 
 @media (max-width: 800px) {
+  .gameBtn {
+    text-align: right;
+  }
+
   #textContainer {
     text-align: right;
     width: 50%;
