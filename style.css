@@ -1,9 +1,10 @@
 .gameBtn {
-  --icon-size: 50px;
+  --icon-size: 7vh;
   --icon-to-circle-ratio: 2.5;
   font-size: var(--icon-size);
   width: calc(var(--icon-size) * var(--icon-to-circle-ratio));
   height: calc(var(--icon-size) * var(--icon-to-circle-ratio));
+  text-align: center;
   margin-top: 20px;
   background-color: rgba(255, 255, 255, 70%);
   border: 5px solid rgb(255, 209, 166);
@@ -17,7 +18,7 @@
 body {
   background-color: #afe7e7;
   font-family: "Bakbak One";
-  font-size: 30px;
+  font-size: 3.5vh;
   color: white;
   display: flex;
   justify-content: center;
@@ -39,5 +40,16 @@ body {
   text-align: center;
   width: 40%;
   height: 98vh;
-  row-gap: 30px;
+  row-gap: 5vh;
+}
+
+@media (max-width: 800px) {
+  #textContainer {
+    text-align: right;
+    width: 50%;
+  }
+
+  #btnsContainer {
+    width: 40%;
+  }
 }
